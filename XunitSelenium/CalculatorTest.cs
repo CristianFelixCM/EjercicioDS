@@ -13,7 +13,7 @@ namespace calculator.test.xunit
             IWebDriver driver = new ChromeDriver();
             //navegate to the url
             driver.Navigate().GoToUrl("http://localhost:5136/Calculator");
-            
+
             IWebElement varlorA = driver.FindElement(By.Id("A_TheNumber"));
             IWebElement Operacion = driver.FindElement(By.Id("Command"));
             IWebElement valorB = driver.FindElement(By.Id("B_TheNumber"));
@@ -71,7 +71,35 @@ namespace calculator.test.xunit
             Assert.True(isNotPrime == isNotPrimeNumberMarkText);
             Assert.True(isUndefined == isUndefinedMarkText);
         }
-        
+
+
+
+
+
+
+        //EJERCICIO
+        [Theory(DisplayName = "Raiz Theory")]
+        [Trait("TestType", "Theory")]
+        [InlineData(4, 2)]
+        [InlineData(5, 2.236)]
+        [InlineData(2.5, 1.581)]
+        [InlineData(0, 0)]
+        public void RaizTheory(double a, double result)
+        {
+            //create a new instance of selenium
+            IWebDriver driver = new ChromeDriver();
+            //navegate to the url
+            driver.Navigate().GoToUrl("http://localhost:5136/Calculator");
+
+            IWebElement varlorA = driver.FindElement(By.Id("A_TheNumber"));
+            IWebElement boton = driver.FindElement(By.XPath("//input[@type='submit']"));
+
+            varlorA.SendKeys(a.ToString());
+            boton.Click();
+            var outputResultString = driver.FindElement(By.XPath("//td[@id='theResult']")).Text;
+
+            Assert.True(Operator.raiz(a) == result);
+        }
 
     }
 }

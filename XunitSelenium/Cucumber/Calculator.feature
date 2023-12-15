@@ -43,4 +43,15 @@ Scenario: Division of two numbers returning non integer value
 	Then the result is 2.5
 	And displayed first name is 10
 	And displayed second name is 4
+
+
+Scenario Outline: Comprobar varios valores para la raiz
+	When Realizo la raiz del numero <number> 
+	Then La respuesta debe ser <result>
+	Examples: 
+	| number | result  |
+	| 4      | 2       |
+	| 5      | 2.236   |
+	| 2.5    | 1.581   |
+	| 0      | 0       |
 	
