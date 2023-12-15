@@ -12,7 +12,7 @@ namespace calculator.test.xunit
             //create a new instance of selenium
             IWebDriver driver = new ChromeDriver();
             //navegate to the url
-            driver.Navigate().GoToUrl("https://bdd-workshop-the-calculator.azurewebsites.net/Calculator");
+            driver.Navigate().GoToUrl("http://localhost:5136/Calculator");
             
             IWebElement varlorA = driver.FindElement(By.Id("A_TheNumber"));
             IWebElement Operacion = driver.FindElement(By.Id("Command"));
@@ -54,7 +54,7 @@ namespace calculator.test.xunit
             //create a new instance of selenium
             IWebDriver driver = new ChromeDriver();
             //navegate to the url
-            driver.Navigate().GoToUrl("https://bdd-workshop-the-calculator.azurewebsites.net/NumberProperties");
+            driver.Navigate().GoToUrl("http://localhost:5136/NumberProperties");
             var numberXPath = @"//input[@id='TheNumber']";
             var submitButton = "//input[@type='submit']";
             IWebElement inputA = driver.FindElement(By.Id("TheNumber"));
