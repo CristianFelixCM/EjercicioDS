@@ -1,4 +1,4 @@
-﻿@model bdd.workshop.calculator.web.Models.Calculator
+﻿@model bdd.workshop.calculator.web.Models.Raiz
 
 @{ 
 
@@ -6,15 +6,14 @@
 }
 
 <h2>Do an Operation</h2>
-@using (Html.BeginForm("Operate","Calculator"))
+@using (Html.BeginForm("Operate","RaizCuadrada"))
             {
 <fieldset>
-    <legend>Calculator</legend>
+    <legend>Raiz</legend>
 
     <div class="editor-field">
         First Number: @Html.TextBoxFor(model => model.A.TheNumber);
     </div>
-
 </fieldset>
                 <input type="submit" value="Do The operation"/>
             }

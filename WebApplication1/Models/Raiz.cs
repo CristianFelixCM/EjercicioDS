@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace bdd.workshop.calculator.web.Models
 {
-    public class Calculator
+    public class Raiz
     {
         public Number A { get; set; } = new Number();
-
 
     }
 }

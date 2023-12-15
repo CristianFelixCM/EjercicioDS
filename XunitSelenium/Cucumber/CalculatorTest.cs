@@ -89,5 +89,32 @@ namespace calculator.test.xunit
         }
 
 
+
+        //EJERCICIO
+        private double EvaluarRaiz(double a)
+        {
+            //create a new instance of selenium
+            IWebDriver driver = new ChromeDriver();
+            //navegate to the url
+            driver.Navigate().GoToUrl("http://localhost:5136/Calculator");
+
+            IWebElement varlorA = driver.FindElement(By.Id("A_TheNumber"));
+            IWebElement boton = driver.FindElement(By.XPath("//input[@type='submit']"));
+
+            varlorA.SendKeys(a.ToString());
+            boton.Click();
+            var outputResultString = driver.FindElement(By.XPath("//td[@id='theResult']")).Text;
+            return double.Parse(outputResultString);
+        }
+        [When(@"Realizo la raiz del numero (.*)")]
+        public void raizTest(double num) {
+            _scenarioContext.Add("Result", EvaluarRaiz(num));
+        }
+
+        [Then(@"La respuesta debe ser (.*)")]
+        public void validarRaiz(int result) {
+            Assert.True(result == _scenarioContext.Get<double>("Result"));
+        }
+
     }
 }

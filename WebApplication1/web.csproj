@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Raiz\**" />
+    <Content Remove="Views\Raiz\**" />
+    <EmbeddedResource Remove="Views\Raiz\**" />
+    <None Remove="Views\Raiz\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\RaizCuadrada.cs" />
+    <Compile Remove="Models\Calculator - Copia.cs" />
+    <Compile Remove="Models\Raiz.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\calculator\calculator.csproj" />
   </ItemGroup>
 
