@@ -93,7 +93,6 @@ namespace calculator.test.xunit
         [InlineData(5, 2.236)]
         public void RaizTheory(int a, int result)
         {
-            //todavia no implementado
             Assert.True(Operator.raiz(a) == result);
         }
 
