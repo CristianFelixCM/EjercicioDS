@@ -52,7 +52,7 @@ namespace calculator
 
         public static double raiz(int number)
         {
-            return Math.Round(Math.Sqrt(number));
+            return Math.Round(Math.Sqrt(number), 3, MidpointRounding.ToEven);
 
         }
 
