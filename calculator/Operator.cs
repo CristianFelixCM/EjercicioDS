@@ -50,7 +50,7 @@ namespace calculator
 
         //Ejercicio
 
-        public static double raiz(int number)
+        public static double raiz(double number)
         {
             return Math.Round(Math.Sqrt(number));
 
