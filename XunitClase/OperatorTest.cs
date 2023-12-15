@@ -95,8 +95,8 @@ namespace calculator.test.xunit
         public void RaizTheory(double a, double result)
         {
             //todavia no implementado
-            Assert.True(Operator.raiz(a) == Math.Round(result)); //he tenido que redondear el resultado dado que me añadía muchos ceros terminado en un 2.....
-            //además ahora fallará dado que aún no se ha implementado el nuevo escenario.
+            Assert.True(Operator.raiz(a) == result); 
+            //ademÃ¡s ahora fallarÃ¡ dado que aÃºn no se ha implementado el nuevo escenario.
         }
 
 
