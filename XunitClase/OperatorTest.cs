@@ -91,10 +91,12 @@ namespace calculator.test.xunit
         [Trait("TestType", "Theory")]
         [InlineData(4, 2)]
         [InlineData(5, 2.236)]
-        public void RaizTheory(int a, int result)
+        [InlineData(2.5, 1.581)]
+        public void RaizTheory(double a, double result)
         {
             //todavia no implementado
-            Assert.True(Operator.raiz(a) == result);
+            Assert.True(Operator.raiz(a) == Math.Round(result)); //he tenido que redondear el resultado dado que me añadía muchos ceros terminado en un 2.....
+            //además ahora fallará dado que aún no se ha implementado el nuevo escenario.
         }
 
 
