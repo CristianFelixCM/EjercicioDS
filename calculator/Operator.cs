@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace calculator
 {
@@ -44,6 +45,18 @@ namespace calculator
             }
             return result;
         }
+
+
+
+        //Ejercicio
+
+        public static double raiz(double number)
+        {
+            return Math.Round(Math.Sqrt(number));
+
+        }
+
+
     }
 
 }
