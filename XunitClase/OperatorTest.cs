@@ -90,10 +90,11 @@ namespace calculator.test.xunit
         [Theory(DisplayName = "Raiz Theory")]
         [Trait("TestType", "Theory")]
         [InlineData(4, 2)]
+        [InlineData(5, 2.236)]
         public void RaizTheory(int a, int result)
         {
             //todavia no implementado
-            Assert.Fail("Exceptionshouldbethrown");
+            Assert.True(Operator.raiz(a) == result);
         }
 
 

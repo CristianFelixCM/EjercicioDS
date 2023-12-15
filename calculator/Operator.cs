@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace calculator
 {
@@ -44,6 +44,18 @@ namespace calculator
             }
             return result;
         }
+
+
+
+        //Ejercicio
+
+        public static int raiz(int number)
+        {
+            return (int)Math.Sqrt(number);
+
+        }
+
+
     }
 
 }
