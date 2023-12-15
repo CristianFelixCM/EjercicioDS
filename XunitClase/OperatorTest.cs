@@ -83,6 +83,22 @@ namespace calculator.test.xunit
         {
             Assert.True(isPrimeNumber == Operator.IsPrimeNumber(number));
         }
+
+
+
+        //EJERCICIO
+        [Theory(DisplayName = "Raiz Theory")]
+        [Trait("TestType", "Theory")]
+        [InlineData(4, 2)]
+        public void RaizTheory(int a, int result)
+        {
+            //todavia no implementado
+            Assert.Fail("Exceptionshouldbethrown");
+        }
+
+
+
+
     }
 }
 
