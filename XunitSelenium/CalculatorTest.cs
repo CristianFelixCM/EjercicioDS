@@ -12,7 +12,7 @@ namespace calculator.test.xunit
             //create a new instance of selenium
             IWebDriver driver = new ChromeDriver();
             //navegate to the url
-            driver.Navigate().GoToUrl("http://localhost:5136/Calculator");
+            driver.Navigate().GoToUrl("https://bdd-workshop-the-calculator.azurewebsites.net/Calculator");
 
             IWebElement varlorA = driver.FindElement(By.Id("A_TheNumber"));
             IWebElement Operacion = driver.FindElement(By.Id("Command"));
